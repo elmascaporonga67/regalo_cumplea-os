@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api/mensajes';
+const API_URL = 'https://regalo-cumplea-os.onrender.com';
 
 // 1. Reproductor de Música
 const btnMusica = document.getElementById('btn-musica');

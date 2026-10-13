@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
-
+const path = require('path');
 const Mensaje = require('./models/mensaje'); // Asegúrate que coincide con el nombre de tu archivo en models/
 
 const app = express();
@@ -43,6 +43,14 @@ app.post('/api/mensajes', async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: 'Error al guardar el mensaje' });
   }
+  
+});
+// Servir archivos estáticos del frontend
+app.use(express.static(path.join(__dirname, '..')));
+
+// Ruta raíz para servir index.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'index.html'));
 });
 
 // Iniciar servidor
