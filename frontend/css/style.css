@@ -1,0 +1,396 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #e49e75;
+  color: #333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/*  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("assets/images/img1,jpg") center/cover;/* Banner Hero */
+.hero {
+  background-image: url('../assets/images/img_portada.jpg');
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(255, 0, 106);
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+}
+
+/* Botones */
+.btn {
+  background-color: #ff4757;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #ff6b81;
+  transform: scale(1.05);
+}
+
+/* Secciones generales */
+.seccion {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.seccion h2 {
+  font-size: 2rem;
+  color: #ff4757;
+  margin-bottom: 30px;
+}
+
+/* Tarjetas */
+.cards-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  width: 280px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #2f3542;
+}
+
+/* Galería */
+.galeria-grid {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.galeria-grid img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* Muro de Felicitaciones */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+}
+
+.formulario input, .formulario textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.mensajes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tarjeta-mensaje {
+  background: white;
+  padding: 20px;
+  border-left: 5px solid #ff4757;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.tarjeta-mensaje h4 {
+  color: #2f3542;
+  margin-bottom: 5px;
+}
+
+.tarjeta-mensaje small {
+  color: #888;
+}
+ 
+/* ========================================= */
+/* MURO ESTILO FACEBOOK - MEJORADO Y CONTRASTADO */
+/* ========================================= */
+
+.fb-wall-container {
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px 60px;
+    background-color: transparent; /* Se quita el fondo gris gigante */
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+.fb-wall-card {
+    background: #1e1e24; /* Tarjeta oscura elegante para contrastar con el fondo cálido */
+    width: 100%;
+    max-width: 650px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); /* Sombra elegante */
+    padding: 24px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.fb-wall-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #ffffff; /* Texto blanco resaltado */
+    border-bottom: 1px solid #33343d;
+    padding-bottom: 14px;
+    text-align: center;
+}
+
+/* LISTA DE COMENTARIOS */
+.fb-comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.fb-comment {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* FOTO DE PERFIL CIRCULAR */
+.fb-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    flex-shrink: 0;
+    border: 2px solid #ff7b54; /* Borde cálido en las fotos */
+    background-color: #2d2d37;
+}
+
+/* BURBUJA DEL COMENTARIO */
+.fb-comment-bubble {
+    background-color: #2d2d37; /* Burbuja gris oscura dentro de tarjeta */
+    padding: 10px 14px;
+    border-radius: 18px;
+    max-width: calc(100% - 60px);
+    box-sizing: border-box;
+    border: 1px solid #3d3d4a;
+}
+
+.fb-name {
+    font-weight: 700;
+    font-size: 14px;
+    color: #ffb07c; /* Nombre en tono cálido que resalta */
+    display: block;
+    margin-bottom: 3px;
+}
+
+.fb-text {
+    margin: 0;
+    font-size: 14px;
+    color: #f0f0f5; /* Texto claro legible */
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+/* ACCIONES DE COMENTARIO */
+.fb-comment-actions {
+    width: 100%;
+    margin-left: 52px;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #a0a0b0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.fb-comment-actions span {
+    cursor: pointer;
+    font-weight: 600;
+    color: #a0a0b0;
+    transition: color 0.2s;
+}
+
+.fb-comment-actions span:hover {
+    color: #ff7b54;
+    text-decoration: underline;
+}
+
+.fb-reactions {
+    margin-left: auto;
+    font-weight: normal !important;
+    background: #2d2d37;
+    padding: 2px 8px;
+    border-radius: 12px;
+    border: 1px solid #3d3d4a;
+    color: #ffffff;
+}
+
+/* CAJA DE ENTRADA / FORMULARIO */
+.fb-comment-input-block {
+    display: flex;
+    align-items: flex-start;
+    border-top: 1px solid #33343d;
+    padding-top: 20px;
+}
+
+.fb-avatar-input {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    flex-shrink: 0;
+    border: 2px solid #ff7b54;
+    background-color: #2d2d37;
+}
+
+.fb-form {
+    flex-grow: 1;
+}
+
+.fb-input-bubble {
+    background-color: #2d2d37;
+    padding: 10px 14px;
+    border-radius: 16px;
+    border: 1px solid #3d3d4a;
+    transition: border-color 0.2s;
+}
+
+.fb-input-bubble:focus-within {
+    border-color: #ff7b54;
+}
+
+.fb-name-label {
+    font-weight: 700;
+    font-size: 12px;
+    color: #ffb07c;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.fb-form textarea {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 14px;
+    resize: none;
+    height: 45px;
+    outline: none;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+.fb-form textarea::placeholder {
+    color: #8a8a9e;
+}
+
+.fb-form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.fb-btn-secondary {
+    background-color: #3a3a48;
+    color: #e0e0e0;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.fb-btn-secondary:hover {
+    background-color: #4a4a5a;
+}
+
+.fb-btn-primary {
+    background-color: #ff7b54; /* Botón naranja/cálido vibrante */
+    color: #ffffff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(255, 123, 84, 0.3);
+    transition: transform 0.1s, background 0.2s;
+}
+
+.fb-btn-primary:hover {
+    background-color: #ff6030;
+    transform: translateY(-1px);
+}
+
+/* BOTÓN DE MÚSICA ABAJO */
+.music-control-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid #33343d;
+}
+
+#btnMusica {
+    background: transparent;
+    border: none;
+    color: #a0a0b0;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: color 0.2s;
+}
+
+#btnMusica:hover {
+    color: #ffffff;
+}
