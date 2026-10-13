@@ -19,17 +19,18 @@ body {
 /*  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("assets/images/img1,jpg") center/cover;/* Banner Hero */
 .hero {
   background-image: url('../assets/images/img_portada.jpg');
-  background-size: cover;                  /* Mantiene la proporción de la imagen y la adapta a la pantalla */
-  background-position: center center;      /* Centra la imagen para que se vea lo más importante */
-  background-repeat: no-repeat;           /* Evita que se repita la imagen */
+  background-size: contain;                /* Hace que TODA la foto quepa completa sin zoom */
+  background-position: center center;      /* Centra la foto */
+  background-repeat: no-repeat;           /* Evita que se repita */
+  background-color: #1a1a1a;               /* Fondo oscuro elegante alrededor si sobran bordes */
   height: 80vh;
   display: flex;
-  flex-direction: column;                  /* Alinea el contenido ordenadamente */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: rgb(255, 0, 106);
-  padding: 0 20px;                         /* Margen interno para que el texto no toque las orillas del celular */
+  padding: 0 20px;
 }
 
 .contenedor-principal {
