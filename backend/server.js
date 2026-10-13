@@ -43,14 +43,14 @@ app.post('/api/mensajes', async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: 'Error al guardar el mensaje' });
   }
-  
+
 });
 // Servir archivos estáticos del frontend
-app.use(express.static(path.join(__dirname, '..')));
+app.use(express.static(__dirname));
 
 // Ruta raíz para servir index.html
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Iniciar servidor
