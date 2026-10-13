@@ -27,9 +27,12 @@ body {
   color: rgb(255, 0, 106);
 }
 
-.hero-content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 15px;
+.contenedor-principal {
+  background-size: cover;          /* Hace que la imagen cubra todo el espacio proporcionalmente */
+  background-position: center;       /* Centra la imagen */
+  background-repeat: no-repeat;    /* Evita que se repita */
+  width: 100%;
+  min-height: 100vh;
 }
 
 .hero-content p {
